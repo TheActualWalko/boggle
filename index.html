@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Boggle!</title>
+    <style>
+    body{
+      background:#222;
+      font-family:"Arial";
+      font-weight:600;
+    }
+      h1{
+        color:white;
+      }
+      table{
+        position:fixed;
+        left:50%;
+        top:50%;
+        margin-top:-210px;
+        margin-left:-210px;
+        border:none;
+        background-color:#339;
+        border-radius:5px;
+      }
+      tr{
+        margin:0;
+      }
+      td{
+        border-radius:5px;
+        width:80px;
+        height:80px;
+        color:#339;
+        background:white;
+        border:none;
+        padding:5px;
+        font-size:60px;
+        text-transform:uppercase;
+        text-align:center;
+        margin:0;
+      }
+      td.qu{
+        text-transform:none;
+      }
+      #checker{
+        /*display:none;*/
+      }
+      input{
+        border:none;
+        background:white;
+        color:black;
+      }
+      button{
+        border:none;
+        font-family:inherit;
+        background:red;
+        color:white;
+        border-radius:5px;
+      }
+      #timer-wrap{
+        color:white;
+      }
+      #overlay{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:1000;
+        background:#222;
+      }
+      .hidden{
+        opacity:0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="timer-wrap">Time remaining: <span id="timer"></span></h1>
+    <div id="overlay" onclick="begin()">
+      <h1 id="overlay-text">Click anywhere to begin!</h1>
+    </div>
+    <table id="game" cellspacing="4" cellpadding="0">
+      
+    </table>
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
